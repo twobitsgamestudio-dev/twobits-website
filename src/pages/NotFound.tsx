@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowLink } from '../components/ArrowLink';
 import { Page } from '../components/Page';
 import { PixelCharacters } from '../components/PixelCharacters';

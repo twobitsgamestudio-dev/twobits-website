@@ -1,12 +1,15 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useLayoutEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { FrozenOutlet } from './FrozenOutlet';
 
 export function SiteLayout() {
   const location = useLocation();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="flex min-h-screen w-full flex-col overflow-x-clip bg-white">
@@ -18,18 +21,14 @@ export function SiteLayout() {
       </a>
       <Header />
       <div id="site-content" className="flex flex-1 flex-col">
-        <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-          <motion.div
-            key={location.pathname}
-            className="flex flex-1 flex-col"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.18, ease: [0.23, 1, 0.32, 1] }}>
-            
-            <FrozenOutlet />
-          </motion.div>
-        </AnimatePresence>
+        <motion.div
+          key={location.pathname}
+          className="flex flex-1 flex-col"
+          initial={{ opacity: 0.98, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}>
+          <Outlet />
+        </motion.div>
         <Footer />
       </div>
     </div>);

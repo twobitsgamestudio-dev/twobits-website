@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import { useId } from 'react';
 import type { Game } from '../types/game';
 import { useCarousel } from '../hooks/useCarousel';
 import { CarouselControls } from './CarouselControls';

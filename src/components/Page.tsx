@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 interface PageProps {
@@ -10,7 +10,7 @@ interface PageProps {
 export function Page({ title, description, children }: PageProps) {
   useDocumentMeta(title, description);
   return (
-    <main id="main" tabIndex={-1} className="flex-1 outline-none">
+    <main id="main" tabIndex={-1} className="flex flex-1 flex-col justify-center outline-none">
       {children}
     </main>);
 

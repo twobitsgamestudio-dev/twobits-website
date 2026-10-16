@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import { useId } from 'react';
 import type { GameImage } from '../types/game';
 import { useCarousel } from '../hooks/useCarousel';
 import { Artwork } from './Artwork';

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowLeftIcon, ArrowRightIcon, XIcon } from 'lucide-react';
 import type { GameImage } from '../types/game';

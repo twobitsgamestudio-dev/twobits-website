@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { ImagesIcon, PlayIcon } from 'lucide-react';
+import { PlayIcon } from 'lucide-react';
 import { ArrowLink } from '../components/ArrowLink';
 import { Artwork } from '../components/Artwork';
 import { Button } from '../components/Button';
 import { Gallery } from '../components/Gallery';
+import { GooglePlayBadge } from '../components/GooglePlayBadge';
 import { Lightbox } from '../components/Lightbox';
 import { Page } from '../components/Page';
 import { Reveal } from '../components/Reveal';
@@ -47,24 +48,18 @@ export function GameDetail() {
               </h1>
             </Reveal>
             <Reveal delay={2}>
-              <p className="mt-5 font-display text-[clamp(2rem,4vw,3.25rem)] font-normal leading-[1.05] tracking-[-0.03em]">
+              <p className="mt-5 font-display text-[clamp(1.625rem,3vw,2.5rem)] font-normal leading-[1.05] tracking-[-0.03em]">
                 {game.headline}
               </p>
               <p className="mt-6 max-w-[30rem] text-[clamp(1.125rem,1.45vw,1.375rem)] leading-[1.45]">{game.description}</p>
             </Reveal>
             <Reveal delay={3} className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-              {game.trailerUrl ?
-              <>
-                  <Button icon={<PlayIcon aria-hidden="true" className="h-5 w-5 fill-white" />} onClick={() => setTrailerOpen(true)}>
-                    Watch trailer
-                  </Button>
-                  <ArrowLink onClick={openGallery}>View gallery</ArrowLink>
-                </> :
-
-              <Button icon={<ImagesIcon aria-hidden="true" className="h-5 w-5" strokeWidth={1.75} />} onClick={openGallery}>
-                  View gallery
+              <GooglePlayBadge href={game.playStoreUrl} gameTitle={game.title} />
+              {game.trailerUrl && (
+                <Button icon={<PlayIcon aria-hidden="true" className="h-5 w-5 fill-white" />} onClick={() => setTrailerOpen(true)}>
+                  Watch trailer
                 </Button>
-              }
+              )}
             </Reveal>
           </div>
 

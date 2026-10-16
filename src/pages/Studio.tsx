@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { games } from '../data/games';
 import { principles } from '../data/site';
 import { ArrowLink } from '../components/ArrowLink';
 import { Artwork } from '../components/Artwork';
 import { Page } from '../components/Page';
-import { PixelCharacters } from '../components/PixelCharacters';
 import { Reveal } from '../components/Reveal';
 
 export function Studio() {
@@ -15,7 +13,7 @@ export function Studio() {
       description="Twin Bits is an independent game studio focused on simple ideas, beautiful worlds and that one-more-round feeling.">
       
       <div className="container-site pb-20 pt-8 md:pt-12 lg:pb-24 lg:pt-10">
-        <section aria-labelledby="studio-title" className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-end lg:gap-16">
+        <section aria-labelledby="studio-title" className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-start lg:gap-16">
           <Reveal>
             <p className="eyebrow">The studio</p>
             <h1
@@ -27,11 +25,8 @@ export function Studio() {
               <span className="block">Lasting play.</span>
             </h1>
           </Reveal>
-          <Reveal delay={2} className="lg:pb-3">
-            <div className="flex justify-start md:justify-center">
-              <PixelCharacters className="[--px:7px] sm:[--px:9px] lg:[--px:10px] xl:[--px:12px]" />
-            </div>
-            <p className="mt-10 max-w-[38rem] text-[clamp(1.25rem,1.9vw,1.75rem)] leading-[1.35] md:mx-auto lg:mt-12">
+          <Reveal delay={2} className="lg:pt-[42px]">
+            <p className="max-w-[38rem] text-[clamp(1.25rem,1.9vw,1.75rem)] leading-[1.35]">
               Twin Bits is an independent game studio focused on simple ideas, beautiful worlds and that one-more-round feeling.
             </p>
           </Reveal>

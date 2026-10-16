@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { XIcon } from 'lucide-react';
 import { Modal } from './Modal';
 

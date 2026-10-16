@@ -1,4 +1,3 @@
-import React from 'react';
 import { inquiryCategories } from '../data/site';
 import { ContactForm } from '../components/ContactForm';
 import { Page } from '../components/Page';

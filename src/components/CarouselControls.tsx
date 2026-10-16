@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react';
 
 interface CarouselControlsProps {

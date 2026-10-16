@@ -1,4 +1,3 @@
-import React from 'react';
 import type { GameImage } from '../types/game';
 
 interface ArtworkProps {

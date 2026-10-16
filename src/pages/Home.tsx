@@ -1,4 +1,3 @@
-import React from 'react';
 import { games } from '../data/games';
 import { ArrowLink } from '../components/ArrowLink';
 import { GameCarousel } from '../components/GameCarousel';
@@ -12,13 +11,13 @@ export function Home() {
       title="Twin Bits — Little games. Lasting joy."
       description="Twin Bits is an independent game studio. Independent games, built for one more round.">
       
-      <div className="container-site pb-16 pt-6 md:pt-10 lg:pb-20 lg:pt-1">
+      <div className="container-site py-12 lg:py-16">
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-10 xl:gap-14">
           <section aria-labelledby="home-title" className="lg:self-center lg:pt-14">
             <Reveal>
               <h1
                 id="home-title"
-                className="display text-[clamp(4.25rem,21vw,6.5rem)] md:text-[clamp(5.5rem,12vw,8rem)] lg:text-[clamp(4.5rem,7.3vw,7.5rem)]">
+                className="display leading-[0.79] text-[clamp(4.25rem,21vw,6.5rem)] md:text-[clamp(5.5rem,12vw,8rem)] lg:text-[clamp(4.5rem,7.3vw,7.5rem)]">
                 
                 <span className="block">
                   <span className="block md:inline lg:block">Little</span>{' '}

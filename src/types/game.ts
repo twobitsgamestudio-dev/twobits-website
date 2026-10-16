@@ -30,5 +30,7 @@ export interface Game {
   gallery: GameImage[];
   /** Optional trailer embed URL — the Watch trailer action only appears when set */
   trailerUrl?: string;
+  /** Add the game's published Google Play URL when available. */
+  playStoreUrl?: string;
   metaDescription: string;
 }

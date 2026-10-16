@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { AlertCircleIcon, ChevronDownIcon, InfoIcon } from 'lucide-react';
 import { subjectOptions } from '../data/site';

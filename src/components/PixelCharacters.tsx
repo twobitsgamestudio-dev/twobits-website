@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface PixelCharactersProps {
   /** Set the pixel unit with a Tailwind arbitrary property, e.g. "[--px:4px] lg:[--px:12px]" */
